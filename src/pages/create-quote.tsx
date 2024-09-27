@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import CreateQuoteForm from '../components/CreateQuoteForm';
 import { uploadImage, createQuote } from '@/handlers/handlers';
+import { toast } from 'sonner';
 
 export default function CreateQuotePage() {
   const router = useRouter();
@@ -25,6 +26,9 @@ export default function CreateQuotePage() {
 
       await createQuote(text, mediaUrl, token);
       setLoading(false);
+      toast('Quote created', {
+        description: 'Quate created successfully',
+      });
 
       router.push('/quotes');
     } catch (err) {
