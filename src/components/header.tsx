@@ -6,7 +6,6 @@ import { FC, useEffect, useState } from 'react';
 const Header: FC = () => {
   const router = useRouter();
   const [tokenPresent, setTokenPresent] = useState(false);
-  console.log(router.route);
 
   useEffect(() => {
     const loginRoute = router.route === '/';
