@@ -41,8 +41,8 @@ export default function LoginForm({ onSubmit, loading }: any) {
   };
 
   return (
-    <div onSubmit={handleSubmit} className="space-y-4 flex flex-col justify-center">
-      <Card className="w-full md:2/3 lg:1/2 xl:w-1/3 lg:mx-auto">
+    <div onSubmit={handleSubmit} className="space-y-4 flex flex-col justify-center  mx-8">
+      <Card className="w-full flex flex-col justify-center md:mx-auto  md:w-2/3 lg:w-1/2 xl:w-1/3 lg:mx-auto">
         <CardHeader>
           <CardTitle className="text-center text-3xl text-gray-800">LOGIN</CardTitle>
         </CardHeader>
