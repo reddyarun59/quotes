@@ -4,7 +4,6 @@ import Link from 'next/link';
 import QuoteList from '@/components/QuoteList';
 import { getQuotes } from '@/handlers/handlers';
 import { Quote } from '@/lib';
-// import withAuthenticator from '@/hoc/withAuthenticator/withAuthenticator';
 
 export default function QuotesPage() {
   const router = useRouter();
@@ -26,8 +25,6 @@ export default function QuotesPage() {
       } else {
         setQuotes((prevQuotes) => [...prevQuotes, ...data]);
         setOffset((prevOffset) => prevOffset + limit);
-
-        // setOffset((prevOffset) => prevOffset + limit);
       }
     } catch (error) {
       console.error('Failed to fetch quotes:', error);
@@ -35,11 +32,9 @@ export default function QuotesPage() {
   };
 
   useEffect(() => {
-    // Check if the token is present in localStorage (or cookies)
     const token = localStorage.getItem('token');
 
     if (!token) {
-      // If no token, redirect to login
       router.push('/');
     }
   }, []);
