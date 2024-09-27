@@ -11,7 +11,7 @@ const Header: FC = () => {
   useEffect(() => {
     const loginRoute = router.route === '/';
     const token = localStorage.getItem('token');
-    if (token || loginRoute) {
+    if (token && !loginRoute) {
       setTokenPresent(true);
     }
   }, [router]);
