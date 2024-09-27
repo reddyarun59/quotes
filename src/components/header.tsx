@@ -6,10 +6,12 @@ import { FC, useEffect, useState } from 'react';
 const Header: FC = () => {
   const router = useRouter();
   const [tokenPresent, setTokenPresent] = useState(false);
+  console.log(router.route);
 
   useEffect(() => {
+    const loginRoute = router.route === '/';
     const token = localStorage.getItem('token');
-    if (token) {
+    if (token || loginRoute) {
       setTokenPresent(true);
     }
   }, [router]);
