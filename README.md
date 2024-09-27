@@ -1,4 +1,4 @@
-# Quote App
+# Quotesy App
 
 A simple quote sharing application built with Next.js, Tailwind CSS, and the Shadcn UI component library.
 
@@ -21,13 +21,13 @@ A simple quote sharing application built with Next.js, Tailwind CSS, and the Sha
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/reddyarun59/quote.git
+   git clone https://github.com/reddyarun59/quotes.git
    ```
 
 2. **Install dependencies**:
 
    ```bash
-   cd quote
+   cd quotes
    npm install
    ```
 
@@ -67,7 +67,3 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
    - Provides an image upload option to select a local file.
    - Includes a submit button to send the quote creation request.
    - Displays feedback upon successful quote creation.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
